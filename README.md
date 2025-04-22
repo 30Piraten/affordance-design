@@ -148,7 +148,7 @@ src
 The demo simulates interactions between agents and objects. To run the demo:
 
 ```bash
-    node dist/main.js
+node dist/main.js
 ```
 
 This will execute the runDemo function in dist/, which creates a sample world and describes interactions.
