@@ -1,0 +1,32 @@
+graph TD
+  subgraph Agents
+    A1[Child]
+    A2[Adult]
+    A3[Robot Arm]
+  end
+
+  subgraph Objects
+    O1[Car]
+    O2[Toy Plane]
+  end
+
+  %% Abilities Legend:
+  %% drive: solid line
+  %% lift: dashed
+  %% pretend: dotted
+  %% disassemble: thick line
+
+  %% Child interactions
+  A1 -- pretend --> O1
+  A1 -- pretend --> O2
+
+  %% Adult interactions
+  A2 -- drive --> O1
+
+  %% Robot Arm interactions
+  A3 -. lift .-> O1
+  A3 === disassemble ===> O2
+
+  %% Optional: Affordance edges (labels)
+  click A1 "https://example.com/agent/child" "Child"
+  click O1 "https://example.com/object/car" "Car"
